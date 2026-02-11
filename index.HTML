@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PaintbrushStrokes_</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">LOGO</div>
+    <h1>PaintbrushStrokes_</h1>
+</header>
+
+<nav>
+    <button onclick="filterSelection('all')">All</button>
+    <button onclick="filterSelection('paint')">Painting Supplies</button>
+    <button onclick="filterSelection('canvas')">Canvas & Surfaces</button>
+    <button onclick="filterSelection('accessories')">Accessories</button>
+</nav>
+
+<section class="products">
+
+    <div class="product paint">
+        <h3>Professional Acrylic Paint Set</h3>
+        <p>$29.99</p>
+        <a href="#" target="_blank">View on Amazon</a>
+    </div>
+
+    <div class="product canvas">
+        <h3>Stretched Canvas Pack</h3>
+        <p>$24.99</p>
+        <a href="#" target="_blank">View on Amazon</a>
+    </div>
+
+    <div class="product accessories">
+        <h3>Palette Knife Set</h3>
+        <p>$12.99</p>
+        <a href="#" target="_blank">View on Amazon</a>
+    </div>
+
+</section>
+
+<footer>
+    <p>As an Amazon Associate, PaintbrushStrokes_ earns from qualifying purchases.</p>
+</footer>
+
+<script>
+function filterSelection(category) {
+    let products = document.getElementsByClassName("product");
+    for (let i = 0; i < products.length; i++) {
+        products[i].style.display = "none";
+        if (category === "all" || products[i].classList.contains(category)) {
+            products[i].style.display = "block";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
